@@ -1,10 +1,10 @@
 {
-  "name": "@opentelemetry/instrumentation-xml-http-request",
-  "version": "0.18.2",
+  "name": "@token-io/instrumentation-xml-http-request",
+  "version": "1.0.0",
   "description": "OpenTelemetry XMLHttpRequest automatic instrumentation package.",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
-  "repository": "open-telemetry/opentelemetry-js",
+  "repository": "tokenio/opentelemetry-js",
   "scripts": {
     "compile": "tsc --build",
     "clean": "tsc --build --clean",
@@ -39,7 +39,7 @@
     "README.md"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "private"
   },
   "devDependencies": {
     "@babel/core": "7.13.14",
