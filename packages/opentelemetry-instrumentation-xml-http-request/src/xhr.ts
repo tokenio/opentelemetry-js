@@ -295,8 +295,8 @@ export class XMLHttpRequestInstrumentation extends InstrumentationBase<XMLHttpRe
       api.diag.debug('ignoring span as url matches ignored url');
       return;
     }
-    const spanName = `HTTP ${method.toUpperCase()}`;
-
+    const parsedUrl = parseUrl(url);
+    const spanName = `${method.toUpperCase()} - ${parsedUrl.pathname}`;
     const currentSpan = this.tracer.startSpan(spanName, {
       kind: api.SpanKind.CLIENT,
       attributes: {
